@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap");
+@import "tailwindcss";
+
+/* import inconsolata 400,500,700,800*/
+
+@layer base {
+    /* label {
+        display: block;
+    } */
+
+    body {
+        background-image: url("assets/images/background-mobile.png");
+        background-position: center;
+
+        @variant md {
+            background-image: url("assets/images/background-tablet.png");
+        }
+
+        @variant lg {
+            background-image: url("assets/images/background-desktop.png");
+        }
+    }
+}
+
+@theme {
+    --color-neutral-*: initial;
+    --color-orange-*: initial;
+    --color-primary: #4f46e5;
+    --color-neutral-0: hsl(0, 0%, 100%);
+    --color-neutral-300: hsl(252, 6%, 83%);
+    --color-neutral-500: hsl(245, 15%, 58%);
+    --color-neutral-700: hsl(245, 19%, 35%);
+    --color-neutral-900: hsl(248, 70%, 10%);
+    --color-orange-500: hsl(7, 88%, 67%);
+    --color-orange-700: hsl(7, 71%, 60%);
+    --font-primary: "Inconsolata", sans-serif;
+    --text-labels: 20px;
+    --default-transition-duration: 0.2s;
+}
+
+
+@utility text-gradient {
+    color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+}

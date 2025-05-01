@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <title>Conference ticket generator</title>
+
+        <link rel="stylesheet" href="tw.css" />
+    </head>
+    <body
+        class="font-primary text-labels grid h-screen justify-items-center px-10 text-neutral-300"
+    >
+        <div class="max-w-3xl [&_*+*]:mt-5">
+            <!-- Form starts -->
+            <h1 class="text-neutral-0 mt-10 text-center text-5xl font-bold">
+                Your Journey to Coding Conf 2025 Starts Here!
+            </h1>
+            <p class="text-center">
+                Secure your spot at next year's biggest coding conference.
+            </p>
+            <form class="*:block *:w-full">
+                <label for="upload-avatar">Upload avatar</label>
+                <div
+                    class="cursor-pointer flex! flex-col justify-center items-center rounded-lg bg-neutral-700/30 hover:bg-neutral-700 p-2 text-center transition-colors border-dashed border-white border-1 focus-visible:outline-1 fo2us-visible:outline-offset-2 focus-visible:outline-neutral-300"
+                    tabindex="0"
+                    aria-label="Upload avatar"
+                >
+                    <img
+                        class="size-12 mx-auto p-2 bg-neutral-500/20 rounded-xl shadow"
+                        src="./assets/images/icon-upload.svg"
+                        alt="Upload Icon"
+                    />
+                    <input
+                        type="file"
+                        class="sr-only"
+                        id="upload-avatar"
+                        accept="image/*"
+                    />
+                    <p>Drag and drop or click to upload</p>
+                </div>
+
+                <p class="text-sm text-neutral-500">
+                    <img
+                        class="inline"
+                        src="./assets/images/icon-info.svg"
+                        alt="Upload Icon"
+                    />
+                    Upload your photo (JPG or PNG, max size: 500KB).
+                </p>
+                <label class="" for="full-name">Full Name</label>
+                <input
+                    class="rounded-lg bg-neutral-700/30 p-2 outline focus:bg-neutral-700 focus:outline-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300"
+                    type="text"
+                    id="full-name"
+                    required
+                />
+                <label for="email">Email Address</label>
+                <input
+                    class="rounded-lg bg-neutral-700/30 p-2 outline focus:bg-neutral-700 transition-colors focus:outline-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-300"
+                    type="email"
+                    id="email"
+                    placeholder="example@email.com"
+                    required
+                />
+                <label for="github-username">GitHub Username</label>
+                <input
+                    class="rounded-lg bg-neutral-700/30 p-2 outline focus:bg-neutral-700 transition-colors focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-neutral-300"
+                    type="text"
+                    id="github-username"
+                    placeholder="@yourusername"
+                    required
+                />
+                <button
+                    class="rounded-xl bg-orange-500 px-1 py-3 font-bold text-neutral-900 cursor-pointer hover:bg-orange-700 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300"
+                    type="submit"
+                >
+                    Generate My ticket
+                </button>
+            </form>
+            <div class="ticket hidden">
+                <div class="ticket__body">
+                    <div class="ticket__header">
+                        <img
+                            src="./assets/images/ticket-header.png"
+                            alt="Ticket Header"
+                        />
+                        <p>Coding Conf</p>
+                        <p>Jan 31, 2025 / Austin, TX</p>
+                    </div>
+                    <div class="ticket__content">
+                        <img
+                            src="./assets/images/avatar.png"
+                            alt="Avatar"
+                            class="avatar"
+                        />
+                        <h2 class="ticket__name">Full Name</h2>
+                        <p class="ticket__email">Email Address</p>
+                        <p class="ticket__github">GitHub Username</p>
+                    </div>
+                </div>
+                <div class="ticket__number">
+                    <span class="sr-only">Ticket number</span>
+                    <p class="ticket__number-value">##01609</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- Congrats, name Your ticket is ready. We've emailed your ticket to email and will send updates in the run up to the
+event. Coding Conf Jan 31, 2025 / Austin, TX -->
