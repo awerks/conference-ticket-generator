@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,104 +16,244 @@
         <link rel="stylesheet" href="tw.css" />
     </head>
     <body
-        class="font-primary text-labels grid h-screen justify-items-center px-10 text-neutral-300"
+        class="font-primary text-labels grid justify-items-center md:px-10 px-5 text-neutral-300 pb-10 md:h-screen"
     >
-        <div class="max-w-3xl [&_*+*]:mt-5">
-            <!-- Form starts -->
-            <h1 class="text-neutral-0 mt-10 text-center text-5xl font-bold">
+        <div class="max-w-2xl">
+            <a href="index.html">
+                <img
+                class="mx-auto mt-10"
+                src="assets/images/logo-full.svg"
+                alt="Coding Conf Logo"
+                width="200"
+                height="29"
+            />
+            </a>
+            
+            <h1
+                class="text-neutral-0 mt-10 text-center text-3xl md:text-5xl font-bold leading-[1.2]"
+            >
                 Your Journey to Coding Conf 2025 Starts Here!
             </h1>
-            <p class="text-center">
+            <p
+                class="secure-message text-center text-xl mt-6 text-neutral-300/85"
+            >
                 Secure your spot at next year's biggest coding conference.
             </p>
-            <form class="*:block *:w-full">
+            <form
+                class="max-w-[30rem] mx-auto grid gap-4 mt-10"
+                id="ticket-form"
+            >
                 <label for="upload-avatar">Upload avatar</label>
+
                 <div
-                    class="cursor-pointer flex! flex-col justify-center items-center rounded-lg bg-neutral-700/30 hover:bg-neutral-700 p-2 text-center transition-colors border-dashed border-white border-1 focus-visible:outline-1 fo2us-visible:outline-offset-2 focus-visible:outline-neutral-300"
-                    tabindex="0"
-                    aria-label="Upload avatar"
+                    class="upload-container rounded-lg border border-dashed border-neutral-300 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-neutral-300/80"
                 >
-                    <img
-                        class="size-12 mx-auto p-2 bg-neutral-500/20 rounded-xl shadow"
-                        src="./assets/images/icon-upload.svg"
-                        alt="Upload Icon"
-                    />
-                    <input
-                        type="file"
-                        class="sr-only"
-                        id="upload-avatar"
-                        accept="image/*"
-                    />
-                    <p>Drag and drop or click to upload</p>
+                    <label
+                        class="upload-avatar flex flex-col justify-center items-center p-4 text-center"
+                        for="file-input"
+                        id="upload-label"
+                    >
+                        <img
+                            class="size-12 mx-auto p-2 bg-neutral-500/20 rounded-xl outline-neutral-300/20 outline pointer-events-none"
+                            src="./assets/images/icon-upload.svg"
+                            alt=""
+                            id="upload-icon"
+                            aria-hidden="true"
+                        />
+                        <input
+                            type="file"
+                            class="sr-only"
+                            id="file-input"
+                            name="avatar"
+                            accept="image/*"
+                        />
+                        <p
+                            class="drag-text mt-2 pointer-events-none text-lg text-neutral-300/80"
+                        >
+                            Drag and drop or click to upload
+                        </p>
+                    </label>
+
+                    <div
+                        class="image-preview bg-neutral-700/30 p-4 hidden flex-col items-center"
+                        id="image-preview-area"
+                    >
+                        <img
+                            class="size-12 mx-auto rounded-xl object-cover mb-4 outline outline-neutral-300/70"
+                            src=""
+                            alt="Avatar preview"
+                            id="preview-image"
+                        />
+                        <div class="flex gap-4" id="remove-change-btns">
+                            <button
+                                type="button"
+                                class="bg-neutral-0/10 py-1 px-2 rounded-sm text-sm text-neutral-300/80 hover:underline hover:underline-offset-2 hover:bg-neutral-0/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80 cursor-pointer transition-colors"
+                                id="remove-btn"
+                            >
+                                Remove image
+                            </button>
+                            <button
+                                type="button"
+                                class="bg-neutral-0/10 py-1 px-2 rounded-sm text-sm text-neutral-300/80 hover:underline hover:underline-offset-2 hover:bg-neutral-0/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80 cursor-pointer transition-colors"
+                                id="change-btn"
+                            >
+                                Change image
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <p class="text-sm text-neutral-500">
-                    <img
-                        class="inline"
-                        src="./assets/images/icon-info.svg"
-                        alt="Upload Icon"
-                    />
+                <p
+                    class="text-sm text-neutral-500 inline-flex gap-2 items-center"
+                    id="input-info"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+                        />
+                        <path
+                            fill="currentColor"
+                            d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+                        />
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.004 10.462V7.596M8 5.569v-.042"
+                        />
+                    </svg>
                     Upload your photo (JPG or PNG, max size: 500KB).
                 </p>
-                <label class="" for="full-name">Full Name</label>
+                <label for="full-name">Full Name</label>
                 <input
-                    class="rounded-lg bg-neutral-700/30 p-2 outline focus:bg-neutral-700 focus:outline-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300"
+                    class="input"
+                    name="full-name"
                     type="text"
                     id="full-name"
-                    required
                 />
                 <label for="email">Email Address</label>
                 <input
-                    class="rounded-lg bg-neutral-700/30 p-2 outline focus:bg-neutral-700 transition-colors focus:outline-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-300"
+                    class="input"
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="example@email.com"
                     required
                 />
+                <p
+                    id="email-error"
+                    class="hidden text-sm text-red-400 gap-2 items-center"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+                        />
+                        <path
+                            fill="currentColor"
+                            d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+                        />
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.004 10.462V7.596M8 5.569v-.042"
+                        />
+                    </svg>
+                    Please enter a valid email address.
+                </p>
                 <label for="github-username">GitHub Username</label>
                 <input
-                    class="rounded-lg bg-neutral-700/30 p-2 outline focus:bg-neutral-700 transition-colors focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-neutral-300"
+                    class="input"
+                    name="github-username"
                     type="text"
                     id="github-username"
                     placeholder="@yourusername"
-                    required
                 />
-                <button
-                    class="rounded-xl bg-orange-500 px-1 py-3 font-bold text-neutral-900 cursor-pointer hover:bg-orange-700 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300"
-                    type="submit"
-                >
+                <button class="btn mt-2" type="submit">
                     Generate My ticket
                 </button>
             </form>
-            <div class="ticket hidden">
-                <div class="ticket__body">
+
+            <div
+                class="hidden ticket outline outline-neutral-300/70 opacity bg-neutral-300/15 grid-cols-[1fr_auto] rounded-lg mt-20 max-w-[30rem] mx-auto"
+            >
+                <div class="ticket__body p-4">
                     <div class="ticket__header">
-                        <img
-                            src="./assets/images/ticket-header.png"
-                            alt="Ticket Header"
-                        />
-                        <p>Coding Conf</p>
-                        <p>Jan 31, 2025 / Austin, TX</p>
+                        <div class="flex gap-4 items-start">
+                            <img
+                                class="self-stretch"
+                                src="assets/images/logo-mark.svg"
+                                alt="Ticket Header"
+                                height="40"
+                                width="40"
+                            />
+
+                            <p class="text-2xl text-neutral-0 font-bold">
+                                Coding Conf
+                                <span class="block text-sm text-neutral-300/60"
+                                    >Jan 31, 2025 / Austin, TX</span
+                                >
+                            </p>
+                        </div>
                     </div>
-                    <div class="ticket__content">
+                    <div class="ticket__content mt-10 flex gap-4">
                         <img
-                            src="./assets/images/avatar.png"
+                            class="size-15 rounded-md"
+                            src="assets/images/image-avatar.jpg"
                             alt="Avatar"
+                            id="ticket-avatar"
+                            height="15"
+                            width="15"
                             class="avatar"
                         />
-                        <h2 class="ticket__name">Full Name</h2>
-                        <p class="ticket__email">Email Address</p>
-                        <p class="ticket__github">GitHub Username</p>
+                        <div>
+                            <h2
+                                id="ticket-name"
+                                class="ticket__name text-neutral-0 text-xl font-bold"
+                            >
+                                Jonatan Kristof
+                            </h2>
+                            <p class="ticket__github" id="ticket-github">
+                                <img
+                                    class="inline-block -mr-1"
+                                    src="assets/images/icon-github.svg"
+                                    alt="Github"
+                                    width="22"
+                                    height="23"
+                                />
+                                @jonatankristof0101
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="ticket__number">
+                <div
+                    class="ticket__number grid place-content-center border-dashed border-l-2"
+                >
                     <span class="sr-only">Ticket number</span>
-                    <p class="ticket__number-value">##01609</p>
+                    <p
+                        class="ticket__number-value text-neutral-300/70 font-bold text-2xl rotate-90"
+                    >
+                        #01609
+                    </p>
                 </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
-
-<!-- Congrats, name Your ticket is ready. We've emailed your ticket to email and will send updates in the run up to the
-event. Coding Conf Jan 31, 2025 / Austin, TX -->

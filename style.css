@@ -1,26 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap");
 @import "tailwindcss";
 
-/* import inconsolata 400,500,700,800*/
-
 @layer base {
-    /* label {
-        display: block;
-    } */
-
     body {
-        background-image: url("assets/images/background-mobile.png");
-        background-position: center;
+        -webkit-font-smoothing: antialiased;
+        background-image:
+            url("assets/images/pattern-squiggly-line-top.svg"),
+            url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+            url("assets/images/background-mobile.png");
+
+        background-position:
+            top right,
+            bottom left,
+            center bottom;
+        background-size:
+            50%,
+            50%,
+            auto;
+        background-repeat: no-repeat, no-repeat, no-repeat;
 
         @variant md {
-            background-image: url("assets/images/background-tablet.png");
+            background-image:
+                url("assets/images/pattern-squiggly-line-top.svg"),
+                url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+                url("assets/images/background-tablet.png");
+
         }
 
         @variant lg {
-            background-image: url("assets/images/background-desktop.png");
+            background-image:
+                url("assets/images/pattern-squiggly-line-top.svg"),
+                url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+                url("assets/images/background-desktop.png");
         }
+
     }
 }
+
 
 @theme {
     --color-neutral-*: initial;
@@ -37,6 +53,23 @@
     --text-labels: 20px;
     --default-transition-duration: 0.2s;
 }
+
+
+
+.input {
+    @apply rounded-lg bg-neutral-700/30 p-2 outline outline-neutral-500 focus:bg-neutral-700 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80;
+}
+
+
+
+.upload-avatar {
+    @apply cursor-pointer bg-neutral-700/30 hover:bg-neutral-700 transition-colors;
+}
+
+.btn {
+    @apply rounded-xl bg-orange-500 px-1 py-3 font-bold text-neutral-900 cursor-pointer hover:bg-orange-700 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80;
+}
+
 
 
 @utility text-gradient {
