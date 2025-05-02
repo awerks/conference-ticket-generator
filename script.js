@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (fileInput.files.length === 0 || !validateFileSize(fileInput.files[0])) {
+            alert("Please upload a valid avatar image (max size: 512KB).");
             return;
         }
 

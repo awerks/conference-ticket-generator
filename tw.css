@@ -255,6 +255,9 @@
     width: calc(var(--spacing) * 15);
     height: calc(var(--spacing) * 15);
   }
+  .min-h-screen {
+    min-height: 100vh;
+  }
   .max-w-2xl {
     max-width: var(--container-2xl);
   }
@@ -503,11 +506,6 @@
       outline-color: color-mix(in oklab, var(--color-neutral-300) 80%, transparent);
     }
   }
-  .md\:h-screen {
-    @media (width >= 48rem) {
-      height: 100vh;
-    }
-  }
   .md\:px-10 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 10);
@@ -523,15 +521,21 @@
 @layer base {
   body {
     -webkit-font-smoothing: antialiased;
-    background-image: url("assets/images/pattern-squiggly-line-top.svg"), url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("assets/images/background-mobile.png");
-    background-position: top right, bottom left, center bottom;
-    background-size: 50%, 50%, auto;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-image: url("assets/images/pattern-lines.svg"), url("assets/images/pattern-squiggly-line-top.svg"), url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("assets/images/pattern-circle.svg"), url("assets/images/background-mobile.png");
+    background-position: top left, top right, bottom left, 80% 80%, center bottom;
+    background-size: auto, 50%, 50%, 30%, auto;
+    background-repeat: no-repeat;
     @media (width >= 48rem) {
-      background-image: url("assets/images/pattern-squiggly-line-top.svg"), url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("assets/images/background-tablet.png");
+      background-image: url("assets/images/pattern-lines.svg"), url("assets/images/pattern-squiggly-line-top.svg"), url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("assets/images/pattern-circle.svg"),  url("assets/images/background-tablet.png");
+      background-position: top left, top right, bottom left, 80% 50%, center bottom;
+      background-size: auto, 50%, 50%, 20%, auto;
+      background-repeat: no-repeat;
     }
     @media (width >= 64rem) {
-      background-image: url("assets/images/pattern-squiggly-line-top.svg"), url("assets/images/pattern-squiggly-line-bottom-desktop.svg"), url("assets/images/background-desktop.png");
+      background-image: url("assets/images/pattern-lines.svg"), url("assets/images/pattern-squiggly-line-top.svg"), url("assets/images/pattern-squiggly-line-bottom-desktop.svg"), url("assets/images/pattern-circle.svg"), url("assets/images/background-desktop.png");
+      background-position: top left, top right, bottom left, 70% 60%, center bottom;
+      background-size: auto, auto, auto, auto, auto;
+      background-repeat: no-repeat;
     }
   }
 }

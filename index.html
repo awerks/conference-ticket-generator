@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="tw.css" />
     </head>
     <body
-        class="font-primary text-labels grid justify-items-center md:px-10 px-5 text-neutral-300 pb-10 md:h-screen"
+        class="font-primary text-labels grid justify-items-center md:px-10 px-5 text-neutral-300 pb-10 min-h-screen"
     >
         <div class="max-w-2xl">
             <a href="index.html">
@@ -137,6 +137,7 @@
                     class="input"
                     name="full-name"
                     type="text"
+                    max="30"
                     id="full-name"
                 />
                 <label for="email">Email Address</label>
@@ -146,6 +147,7 @@
                     id="email"
                     name="email"
                     placeholder="example@email.com"
+                    max="30"
                     required
                 />
                 <p
@@ -182,6 +184,7 @@
                     class="input"
                     name="github-username"
                     type="text"
+                    max="30"
                     id="github-username"
                     placeholder="@yourusername"
                 />

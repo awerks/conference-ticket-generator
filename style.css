@@ -4,39 +4,78 @@
 @layer base {
     body {
         -webkit-font-smoothing: antialiased;
+
+
+
         background-image:
+            url("assets/images/pattern-lines.svg"),
             url("assets/images/pattern-squiggly-line-top.svg"),
             url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+            url("assets/images/pattern-circle.svg"),
             url("assets/images/background-mobile.png");
 
         background-position:
+            top left,
             top right,
             bottom left,
+            80% 80%,
             center bottom;
         background-size:
+            auto,
             50%,
             50%,
+            30%,
             auto;
-        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-repeat: no-repeat;
 
         @variant md {
             background-image:
+                url("assets/images/pattern-lines.svg"),
                 url("assets/images/pattern-squiggly-line-top.svg"),
                 url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+                url("assets/images/pattern-circle.svg"),
+                /* Added */
                 url("assets/images/background-tablet.png");
+            background-position:
+                top left,
+                top right,
+                bottom left,
+                80% 50%,
+                center bottom;
+            background-size:
+                auto,
+                50%,
+                50%,
+                20%,
+                auto;
+            background-repeat: no-repeat;
 
         }
 
         @variant lg {
             background-image:
+                url("assets/images/pattern-lines.svg"),
                 url("assets/images/pattern-squiggly-line-top.svg"),
                 url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+                url("assets/images/pattern-circle.svg"),
                 url("assets/images/background-desktop.png");
+            background-position:
+                top left,
+                top right,
+                bottom left,
+                70% 60%,
+                center bottom;
+            background-size:
+                auto,
+                auto,
+                auto,
+                auto,
+                auto;
+            background-repeat: no-repeat;
         }
 
     }
 }
-
 
 @theme {
     --color-neutral-*: initial;
