@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,31 +16,31 @@
         <link rel="stylesheet" href="tw.css" />
     </head>
     <body
-        class="font-primary text-labels grid justify-items-center md:px-10 px-5 text-neutral-300 pb-10 min-h-screen"
+        class="font-primary text-labels grid min-h-screen justify-items-center px-5 pb-10 text-neutral-300 md:px-10"
     >
         <div class="max-w-2xl">
             <a href="index.html">
                 <img
-                class="mx-auto mt-10"
-                src="assets/images/logo-full.svg"
-                alt="Coding Conf Logo"
-                width="200"
-                height="29"
-            />
+                    class="mx-auto mt-10"
+                    src="assets/images/logo-full.svg"
+                    alt="Coding Conf Logo"
+                    width="200"
+                    height="29"
+                />
             </a>
-            
+
             <h1
-                class="text-neutral-0 mt-10 text-center text-3xl md:text-5xl font-bold leading-[1.2]"
+                class="text-neutral-0 mt-10 text-center text-3xl leading-[1.2] font-bold md:text-5xl"
             >
                 Your Journey to Coding Conf 2025 Starts Here!
             </h1>
             <p
-                class="secure-message text-center text-xl mt-6 text-neutral-300/85"
+                class="secure-message mt-6 text-center text-xl text-neutral-300/85"
             >
                 Secure your spot at next year's biggest coding conference.
             </p>
             <form
-                class="max-w-[30rem] mx-auto grid gap-4 mt-10"
+                class="mx-auto mt-10 grid max-w-[30rem] gap-4"
                 id="ticket-form"
             >
                 <label for="upload-avatar">Upload avatar</label>
@@ -49,12 +49,12 @@
                     class="upload-container rounded-lg border border-dashed border-neutral-300 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-neutral-300/80"
                 >
                     <label
-                        class="upload-avatar flex flex-col justify-center items-center p-4 text-center"
+                        class="upload-avatar flex flex-col items-center justify-center p-4 text-center"
                         for="file-input"
                         id="upload-label"
                     >
                         <img
-                            class="size-12 mx-auto p-2 bg-neutral-500/20 rounded-xl outline-neutral-300/20 outline pointer-events-none"
+                            class="pointer-events-none mx-auto size-12 rounded-xl bg-neutral-500/20 p-2 outline outline-neutral-300/20"
                             src="./assets/images/icon-upload.svg"
                             alt=""
                             id="upload-icon"
@@ -68,18 +68,18 @@
                             accept="image/*"
                         />
                         <p
-                            class="drag-text mt-2 pointer-events-none text-lg text-neutral-300/80"
+                            class="drag-text pointer-events-none mt-2 text-lg text-neutral-300/80"
                         >
                             Drag and drop or click to upload
                         </p>
                     </label>
 
                     <div
-                        class="image-preview bg-neutral-700/30 p-4 hidden flex-col items-center"
+                        class="image-preview hidden flex-col items-center bg-neutral-700/30 p-4"
                         id="image-preview-area"
                     >
                         <img
-                            class="size-12 mx-auto rounded-xl object-cover mb-4 outline outline-neutral-300/70"
+                            class="mx-auto mb-4 size-12 rounded-xl object-cover outline outline-neutral-300/70"
                             src=""
                             alt="Avatar preview"
                             id="preview-image"
@@ -87,14 +87,14 @@
                         <div class="flex gap-4" id="remove-change-btns">
                             <button
                                 type="button"
-                                class="bg-neutral-0/10 py-1 px-2 rounded-sm text-sm text-neutral-300/80 hover:underline hover:underline-offset-2 hover:bg-neutral-0/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80 cursor-pointer transition-colors"
+                                class="bg-neutral-0/10 hover:bg-neutral-0/20 cursor-pointer rounded-sm px-2 py-1 text-sm text-neutral-300/80 transition-colors hover:underline hover:underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80"
                                 id="remove-btn"
                             >
                                 Remove image
                             </button>
                             <button
                                 type="button"
-                                class="bg-neutral-0/10 py-1 px-2 rounded-sm text-sm text-neutral-300/80 hover:underline hover:underline-offset-2 hover:bg-neutral-0/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80 cursor-pointer transition-colors"
+                                class="bg-neutral-0/10 hover:bg-neutral-0/20 cursor-pointer rounded-sm px-2 py-1 text-sm text-neutral-300/80 transition-colors hover:underline hover:underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300/80"
                                 id="change-btn"
                             >
                                 Change image
@@ -104,7 +104,7 @@
                 </div>
 
                 <p
-                    class="text-sm text-neutral-500 inline-flex gap-2 items-center"
+                    class="inline-flex items-center gap-2 text-sm text-neutral-500"
                     id="input-info"
                 >
                     <svg
@@ -152,7 +152,7 @@
                 />
                 <p
                     id="email-error"
-                    class="hidden text-sm text-red-400 gap-2 items-center"
+                    class="hidden items-center gap-2 text-sm text-red-400"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -194,11 +194,11 @@
             </form>
 
             <div
-                class="hidden ticket outline outline-neutral-300/70 opacity bg-neutral-300/15 grid-cols-[1fr_auto] rounded-lg mt-20 max-w-[30rem] mx-auto"
+                class="ticket opacity mx-auto mt-20 hidden max-w-[30rem] grid-cols-[1fr_auto] rounded-lg bg-neutral-300/15 outline outline-neutral-300/70"
             >
                 <div class="ticket__body p-4">
                     <div class="ticket__header">
-                        <div class="flex gap-4 items-start">
+                        <div class="flex items-start gap-4">
                             <img
                                 class="self-stretch"
                                 src="assets/images/logo-mark.svg"
@@ -207,7 +207,7 @@
                                 width="40"
                             />
 
-                            <p class="text-2xl text-neutral-0 font-bold">
+                            <p class="text-neutral-0 text-2xl font-bold">
                                 Coding Conf
                                 <span class="block text-sm text-neutral-300/60"
                                     >Jan 31, 2025 / Austin, TX</span
@@ -234,7 +234,7 @@
                             </h2>
                             <p class="ticket__github" id="ticket-github">
                                 <img
-                                    class="inline-block -mr-1"
+                                    class="-mr-1 inline-block"
                                     src="assets/images/icon-github.svg"
                                     alt="Github"
                                     width="22"
@@ -246,11 +246,11 @@
                     </div>
                 </div>
                 <div
-                    class="ticket__number grid place-content-center border-dashed border-l-2"
+                    class="ticket__number grid place-content-center border-l-2 border-dashed"
                 >
                     <span class="sr-only">Ticket number</span>
                     <p
-                        class="ticket__number-value text-neutral-300/70 font-bold text-2xl rotate-90"
+                        class="ticket__number-value rotate-90 text-2xl font-bold text-neutral-300/70"
                     >
                         #01609
                     </p>

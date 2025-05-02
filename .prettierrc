@@ -1,4 +1,7 @@
 {
     "tabWidth": 4,
-    "maxLineLength": 120
+    "maxLineLength": 120,
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ]
 }
